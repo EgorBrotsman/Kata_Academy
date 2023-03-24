@@ -1,0 +1,30 @@
+body, 
+button, 
+h1,h2,h3,
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+ *, *:before, *:after {
+	box-sizing: inherit;
+}
+
+li{
+	list-style: none;
+}
+
+a{
+	display: inline-block;
+	text-decoration: none;
+}
+
+input, button{
+	border: none;
+	outline: none;
+	font-family: inherit;
+}
+
+button{
+	cursor: pointer;
+}

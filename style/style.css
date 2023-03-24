@@ -1,0 +1,136 @@
+body {
+	font-family: "TTLakes-Regular", Arial, Helvetica, sans-serif;
+	color: #000;
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ff3e79;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.container_burger {
+	padding: 0 24px;
+}
+
+.burger-menu {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 320px;
+	padding: 18.73px 0px 32px 0px;
+	background-color: #fff;
+	box-shadow: 0 0 95px 0 #000;
+	font-weight: bold;
+}
+
+.burger-menu__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 50.46px;
+}
+
+.burger-menu__wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.logo_burger {
+	margin-left: 16.73px;
+}
+
+.burger-menu__item {
+	position: relative;
+}
+
+.burger-menu__link {
+	color: #000;
+	display: inline-block;
+	padding-left: 24px;
+	padding-bottom: 32px;
+	opacity: 1;
+	transition: opacity 0.5s ease;
+}
+
+.burger-menu__link::before {
+	position: absolute;
+	content: " ";
+	width: 15px;
+	height: 31px;
+	background-color: #41f6d7;
+	left: -10px;
+	top: -3px;
+	border-radius: 25%;
+	opacity: 0;
+}
+
+.burger-menu__link:hover,
+.burger-menu__link:active,
+.burger-menu__link:focus  {
+	opacity: 0.5;
+	outline: none;
+}
+
+.burger-menu__link:hover.burger-menu__link::before,
+.burger-menu__link:active.burger-menu__link::before,
+.burger-menu__link:focus.burger-menu__link::before {
+	opacity: 1;
+	outline: none;
+}
+
+.burger-menu-contacts__list {
+	display: flex;
+	align-items: center;
+}
+
+.burger-menu-contacts__list a {
+	margin-right: 16px;
+	margin-bottom: 16px;
+}
+.burger-menu-contacts > a {
+	color: #000;
+	display: block;
+}
+
+.burger-menu-contacts__mail {
+	margin-bottom: 12px;
+}
+
+.burger-menu-contacts__phone {
+	font-family: "TTLakes-Bold", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+
+.change-langueg {
+	display: flex;
+}
+
+.btn {
+	background: none;
+}
+
+.btn_lenguge {
+	margin-right: 7px;
+	color: #000;
+}
+.btn_lenguge:hover,
+.btn_lenguge:active,
+.btn_lenguge:focus{
+	margin-bottom: -2px;
+	border-bottom: 2px solid #000;
+}
+
+.btn_lenguge_active {
+	opacity: 0.5;
+}
+
+.change-langueg {
+	margin-top: 40px;
+	margin-bottom: 32px;
+}
