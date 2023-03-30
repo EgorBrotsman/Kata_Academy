@@ -1,4 +1,139 @@
 body {
 	font-family: "TTLakes-Regular", Arial, Helvetica, sans-serif;
 	color: #000;
+	background-color: #f2f2f2;
+	overflow-x: hidden;
+}
+
+.header {
+	padding: 16px;
+	background-color: #fff;
+}
+
+.header__title {
+	font-size: 16px;
+	text-transform: uppercase;
+	color: rgb(126, 126, 130);
+}
+
+.cards {
+	position: relative;
+	margin-top: 16px;
+	margin-left: 8px;
+}
+
+@media screen and (min-width:768px){
+	.cards{
+		margin: 24px;
+	}
+}
+
+.cards::before {
+	z-index: 11;
+	position: absolute;
+	content: "";
+	width: 50px;
+	height: 72px;
+	top: 0;
+	right: 0;
+	box-shadow: inset -24px 0 16px -7px #fff;
+}
+
+@media screen and (min-width:768px){
+	.cards::before{
+		display: none;
+	}
+}
+
+.card {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	padding: 16px;
+	width: 240px;
+	height: 72px;
+	border-radius: 5px;
+	margin: 0 8px;
+	border: 1px solid rgb(234, 234, 234);
+}
+
+@media screen and (min-width:768px){
+	.card{
+		margin: 0;
+		width: 100%;
+	}
+}
+
+.swiper {
+	width: 100%;
+}
+
+@media screen and (max-width:768px){
+	.swiper {
+		height: 105px !important;
+	}
+}
+
+@media screen and (min-width:768px){
+	.swiper {
+		height: 160px;
+	}
+}
+
+.swiper-pagination-bullet {
+	background-color: rgb(181, 182, 188);
+}
+
+.card__arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgb(255, 62, 121);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.btn{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 500;
+	margin-top: 24px;
+}
+
+.btn img{
+	margin-right: 17px;
+}
+
+.btn_hidden img{
+	transform: scale(-1);
+}
+
+.hidden{
+	display: none;
+}
+
+@media screen and (max-width:768px) {
+	.btn{
+		display: none;
+	}
+}
+
+
+
+@media screen and (min-width: 768px) {
+	.swiper-pagination{
+		display: none;
+	}
+	.swiper-wrapper{
+    display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+		column-gap: 24px;
+		row-gap: 16px;
+		transform: translate3d(0px, 0px, 0px) !important;
+		transition-property: none;
+	}
 }
