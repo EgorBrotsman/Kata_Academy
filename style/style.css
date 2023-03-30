@@ -1,136 +1,139 @@
 body {
 	font-family: "TTLakes-Regular", Arial, Helvetica, sans-serif;
 	color: #000;
+	background-color: #f2f2f2;
+	overflow-x: hidden;
 }
 
-.icon {
+.header {
+	padding: 16px;
+	background-color: #fff;
+}
+
+.header__title {
+	font-size: 16px;
+	text-transform: uppercase;
+	color: rgb(126, 126, 130);
+}
+
+.cards {
+	position: relative;
+	margin-top: 16px;
+	margin-left: 8px;
+}
+
+@media screen and (min-width:768px){
+	.cards{
+		margin: 24px;
+	}
+}
+
+.cards::before {
+	z-index: 11;
+	position: absolute;
+	content: "";
+	width: 50px;
+	height: 72px;
+	top: 0;
+	right: 0;
+	box-shadow: inset -24px 0 16px -7px #fff;
+}
+
+@media screen and (min-width:768px){
+	.cards::before{
+		display: none;
+	}
+}
+
+.card {
+	box-sizing: border-box;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
+	background-color: #fff;
+	padding: 16px;
+	width: 240px;
+	height: 72px;
+	border-radius: 5px;
+	margin: 0 8px;
+	border: 1px solid rgb(234, 234, 234);
+}
+
+@media screen and (min-width:768px){
+	.card{
+		margin: 0;
+		width: 100%;
+	}
+}
+
+.swiper {
+	width: 100%;
+}
+
+@media screen and (max-width:768px){
+	.swiper {
+		height: 105px !important;
+	}
+}
+
+@media screen and (min-width:768px){
+	.swiper {
+		height: 160px;
+	}
+}
+
+.swiper-pagination-bullet {
+	background-color: rgb(181, 182, 188);
+}
+
+.card__arrow {
+	display: flex;
 	justify-content: center;
-	background-color: #ff3e79;
+	align-items: center;
+	border: 1px solid rgb(255, 62, 121);
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
 }
 
-.container_burger {
-	padding: 0 24px;
-}
-
-.burger-menu {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	max-width: 320px;
-	padding: 18.73px 0px 32px 0px;
-	background-color: #fff;
-	box-shadow: 0 0 95px 0 #000;
-	font-weight: bold;
-}
-
-.burger-menu__head {
+.btn{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 50.46px;
+	font-weight: 500;
+	margin-top: 24px;
 }
 
-.burger-menu__wrapper {
-	display: flex;
-	align-items: center;
+.btn img{
+	margin-right: 17px;
 }
 
-.logo_burger {
-	margin-left: 16.73px;
+.btn_hidden img{
+	transform: scale(-1);
 }
 
-.burger-menu__item {
-	position: relative;
+.hidden{
+	display: none;
 }
 
-.burger-menu__link {
-	color: #000;
-	display: inline-block;
-	padding-left: 24px;
-	padding-bottom: 32px;
-	opacity: 1;
-	transition: opacity 0.5s ease;
+@media screen and (max-width:768px) {
+	.btn{
+		display: none;
+	}
 }
 
-.burger-menu__link::before {
-	position: absolute;
-	content: " ";
-	width: 15px;
-	height: 31px;
-	background-color: #41f6d7;
-	left: -10px;
-	top: -3px;
-	border-radius: 25%;
-	opacity: 0;
-}
 
-.burger-menu__link:hover,
-.burger-menu__link:active,
-.burger-menu__link:focus  {
-	opacity: 0.5;
-	outline: none;
-}
 
-.burger-menu__link:hover.burger-menu__link::before,
-.burger-menu__link:active.burger-menu__link::before,
-.burger-menu__link:focus.burger-menu__link::before {
-	opacity: 1;
-	outline: none;
-}
-
-.burger-menu-contacts__list {
-	display: flex;
-	align-items: center;
-}
-
-.burger-menu-contacts__list a {
-	margin-right: 16px;
-	margin-bottom: 16px;
-}
-.burger-menu-contacts > a {
-	color: #000;
-	display: block;
-}
-
-.burger-menu-contacts__mail {
-	margin-bottom: 12px;
-}
-
-.burger-menu-contacts__phone {
-	font-family: "TTLakes-Bold", Arial, Helvetica, sans-serif;
-	font-size: 24px;
-}
-
-.change-langueg {
-	display: flex;
-}
-
-.btn {
-	background: none;
-}
-
-.btn_lenguge {
-	margin-right: 7px;
-	color: #000;
-}
-.btn_lenguge:hover,
-.btn_lenguge:active,
-.btn_lenguge:focus{
-	margin-bottom: -2px;
-	border-bottom: 2px solid #000;
-}
-
-.btn_lenguge_active {
-	opacity: 0.5;
-}
-
-.change-langueg {
-	margin-top: 40px;
-	margin-bottom: 32px;
+@media screen and (min-width: 768px) {
+	.swiper-pagination{
+		display: none;
+	}
+	.swiper-wrapper{
+    display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+		column-gap: 24px;
+		row-gap: 16px;
+		transform: translate3d(0px, 0px, 0px) !important;
+		transition-property: none;
+	}
 }

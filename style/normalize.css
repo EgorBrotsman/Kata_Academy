@@ -27,4 +27,6 @@ input, button{
 
 button{
 	cursor: pointer;
+	border: none;
+	background: none;
 }
